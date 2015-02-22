@@ -1,0 +1,114 @@
+/*CSS file for stage1notes.html*/
+
+html {
+	/* I wanted a relatively fixed design with a little bit of fludity */
+    min-width: 840px;
+    max-width: 1080px;
+}
+
+@font-face {
+	/* custom font for title and headers */
+    font-family: geosansLight;
+    src: url(GeosansLight.ttf);
+}
+
+.page_defaults {
+	/* background image. original graphic I put whipped up in paint.net */
+	background-image: url("background.png");
+  	background-attachment: fixed;
+  	background-size: cover;
+
+  	/* default margin */
+  	margin: 50px;
+
+  	/* custom font for titles and headers */
+  	font-family: geosansLight;
+}
+
+.title_h1 {
+	/* style for main page title */
+	text-align: center;
+	font-size: 300%;
+	color: #4425e6;
+	padding: 10px;
+	margin: 1px;
+	border: 1px;
+	border-style: solid;
+	border-color: white;
+	border-radius: 20px;
+	white-space: nowrap;
+
+	/* green text highlight/strikethrough effect with multiple shadows.
+	I know the below code looks somewhat repetitive but I like the outcome.
+	horizontal offset values inverted starting on the 6th row to create
+	symmetrical effect */
+	text-shadow: 1px 1px 4px #7df9ff, 7px 7px 20px yellow, 
+				30px 0px 10px yellow, 60px 0px 20px #eaf754,
+				100px 0px 20px #eaf754, 160px 0px 15px #eaf754, 
+				230px 0px 20px #eaf754, 300px 0px 15px #eaf754,
+				360px 0px 15px #eaf754, 440px 0px 20px yellow,
+				-1px -1px 4px #eaf754, -7px -7px 20px green,
+				-30px 0px 10px green, -60px 0px 20px #eaf754,
+				-100px 0px 20px #eaf754, -160px 0px 15px #eaf754, 
+				-230px 0px 20px #eaf754, -300px 0px 15px #eaf754,
+				-360px 0px 15px #eaf754, -440px 0px 20px yellow;
+}
+
+div {
+	/*transparent yellow background - r,g,b, last value is alpha 
+	between 0.(completely transparent) to 1.0 (not transparent)*/
+	background-color: rgba(234,247,84,0.15);
+
+	/*layered look & rounded corners */
+	padding: 14px;
+	border-radius: 25px;
+}
+
+h1 {
+	/* attributes of Lesson headers below */
+	color: #4425e6;
+
+	/* to prevent the titles from wrapping */
+	white-space: nowrap;
+
+	/* green text highlight/strikethrough effect with multiple shadows */
+	text-shadow: 1px 1px 4px #7df9ff, 7px 7px 20px green, 
+				30px 0px 10px green, 60px 0px 20px #82f52c,
+				100px 0px 20px #82f52c, 160px 0px 15px #82f52c, 
+				230px 0px 20px #82f52c, 300px 0px 15px #82f52c,
+				360px 0px 15px #82f52c, 440px 0px 20px green;
+}
+
+h2, h3 {
+	color: #3c1bf7;
+	/*sub-header font to override blockquote font for neseted h3s.*/
+	font-family: geosansLight;
+
+	/* green highlighted look */
+	text-shadow: 1px 1px 15px #82f52c, 7px 7px 40px #82f52c;
+}
+
+p, blockquote {
+	/* main font of paragraph text content. blockquotes were used for indentation only */
+	color: #11083d;
+	font-family: helvetica;
+}
+
+/* default style for displayed graphics is centered with a border around the image.
+	image should be nested within container tag (like div) of class graphic. */
+.graphic { 
+	text-align: center;
+}
+
+img {
+	border: 1px solid yellow;
+}
+
+/* only used <span> for footer information, because I wanted the line spacing to be closer 
+than with <p> */
+span {
+	/*display:block used to get each span on new line */;
+	display: block;
+	text-align: center;
+	font-size: 95%;
+}

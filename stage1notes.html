@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="stage1notes_style.css">
+		<title>Webpages, Documents, and Structure</title>
+		<meta charset="UTF-8">
+	</head>
+		<body class="page_defaults">
+			<div>
+				<h1 class="title_h1">Webpages, Documents, and Structure</h1>
+				<!-- I know I'm using h1 tags for both the main title and for the lesson headers. I've added the
+			 "title_h1" CSS class below to make the main title bigger & to add some other style properties -->
+			</div>
+				<br> <!-- I wanted a blank space between the title box and the first lesson. <br> seemed to be the 
+							most expedient way to do that. I've used this method below to insert spacers before each new lesson -->
+  		<div>
+	 			<h1>Lesson 1: The Basics of the Web and HTML</h1>
+				<div>
+		 		 <h2>What is the Internet?</h2>
+					<p>The internet is a vast collection of webpages (in the tens-of-billions),
+					which are text documents most commonly of type HTML, interconnected via &quot;hyperlinks.&quot;</p>
+				</div>
+				<div>
+				  <h2>How Does it Work?</h2>
+					 <p>To describe the internet in very broad terms: a <em>web browser</em> (a computer program
+						for viewing webpages) requests an HTML file contained on the <em>web</em> (essentially the 
+						entirety of all servers and computers connected to the internet), via a protocol
+						called <em>HTTP</em> (Hyper Text Transport Protocol), from the <em>server</em> (a computer optimized
+						for hosting HTML documents and other files) on which the requested HTML file resides.
+						The server in turn responds by sending the requested HTML file, also via HTTP and the
+						web, to the web browser.</p>
+				</div>
+				<div>
+				  <h2>What is HTML?</h2>
+						<p>HTML, short for &quot;Hyper Text Markup Language,&quot; is a filetype as well as a computer
+						programming language containing text, and &quot;markups&quot; which web browser applications
+						interpret as instructions for how to display content. For example, if a certain text
+						phrase will appear in bold type, or where in the browser window to display a block of
+						text. HTML documents may also contain references to other files like images and videos,
+						as well as references to other HTML webpages, referred to as links or &quot;hyperlinks.&quot;
+						Links may in fact refer not only to other HTML files, but also to files of any other
+						type.</p>
+				</div>
+			 	<div>
+				  <h2>What are HTML Markups?</h2>
+						<p>HTML markups include tags, tag attributes, and container elements.</p>
+				  <blockquote>
+					 <div>
+						<h3>Tags</h3>
+							 <p>Some examples of tags are &lt;b> (<b>bold</b>), &lt;em> (<i>emphasis:  italics</i>),
+							 &lt;br> (line break), and &lt;p> (paragraph). Certain tags are intended for altering
+							 font characteristics or formatting text; in such cases, an opening tag &lt;TAG> and a
+							 closing  tag &lt;/TAG>  will encapsulate the text content to which such font and
+							 formatting constraints should be applied. Another example of a tag which alters the
+							 properties of enclosed text is the &lt;a> (anchor) tag, which adds to text a &quot;hyperlink&quot;
+							 referring to another HTML file or other document. Text content contained within an
+							 anchor element becomes &quot;clickable&quot; when displayed by a web browser -- when that text
+							 is selected or left-clicked by a mouse, the web browser in turn will attempt to display
+							 the webpage or other file referenced by the hyperlink.</p>
+					 </div>
+					 <div>
+						<h3>Void Tags</h3>
+							 <p>In cases where tags are intended for a use other than altering font or  formatting
+							 properties of any proceeding text content, as is the  case with the &lt;img> (image)
+							 and &lt;br> (line break) tags, a closing  tag may be unnecessary -- tags of this sort
+							 are called &quot;void tags.&quot;</p>
+					 </div>
+					 <div>
+						<h3>Elements</h3>
+							 <p>An &quot;element&quot; refers to the HTML structure encompassing an opening tag, as well as
+							 any enclosed content and a closing tag (unless these two components are unnecessary,
+							 as with void tags). It should be noted that an element may contain any number of
+							 interior nested elements (i.e. &quot;nested tags&quot;).</p>
+					 </div>
+					 <div>
+						<h3>Attributes</h3>
+							 <p>A programmer may be able to further specify the properties and behaviors of certain
+							 tags via their attributes, as is true with the anchor tag:</p> 
+								  <blockquote>&lt;a href:&quot;www.google.com&quot;>click here to go to Google.com&lt;/a>
+								  </blockquote>
+							 <p>Where &quot;href:&quot; is an attribute of the anchor tag, and &quot;www.google.com&quot; is the specified value of that attribute.</p>
+					 </div>
+					 <div>
+						<h3>Container Elements</h3>
+							 <p>Container elements, which include &lt;span> and &lt;div> can be used as containers
+							 for text or other HTML content, which may also affect how the contained content will
+							 display in a web browser.</p>
+						<h3>Inline and Block Elements</h3>
+							 <p>Both tags and container elements are categorized as either &quot;inline&quot; or &quot;block,&quot;
+							 describing their behavior either as affecting HTML content only within a single line
+							 (&quot;inline&quot;), or as effectively creating an &quot;invisible box&quot; (whose height and width may be
+							 defined) around the content enclosed within the opening and closing tags (&quot;block&quot;).
+							 Inline elements include &lt;b>, &lt;em>, &lt;img>, &lt;br>, and &lt;span>. Block elements
+							 include &lt;p> and &lt;div>.</p>
+					 </div>
+				  </blockquote>
+				</div>
+			</div>
+				<br><!-- spacer -->
+		  <div>
+			 <h1>Lesson 2: Creating a Structured Document with HTML</h1>
+				<div>
+				  <h2>What is CSS?</h2>
+						<p>CSS, short for &quot;Cascading Style Sheet,&quot; is a programming language, complete with it&apos;s own
+						syntax and rules, which is intended for controlling the visual style of a webpage. A CSS
+						document may contain style parameters like font-size, font-color, border-width, background
+						images, etc.</p>
+						<p>CSS is a powerful tool: one can simply change the CSS for a webpage and dramatically alter
+						the way that page looks, without ever touching the HTML code.</p>
+				</div>
+				<div>
+				  <h2>How does CSS work with HTML?</h2>
+						<p>By assigning class names to an HTML element (i.e. within an opening HTML tag, by adding
+						the attribute &quot;class&quot; with an appropriate class name as its value) a web browser is provided
+						with instructions for which CSS styles to use for that element. The value (the class name)
+						of the class attribute on the HTML document refers to a CSS class of the same name located on
+						a separate CSS document.</p>
+						<p>House Analogy for a Webpage:</p>
+						<blockquote>HTML - structure of the house, layout of the rooms.<br>
+						CSS - decorations, window blinds, molding, wall colors.<br>
+						Javascript - interactive elements like garage door opener, air conditioner, doorbell.
+						</blockquote>
+				</div>
+				<div>
+				  <h2>The DOM - a Rudimentary Introduction</h2>
+						<p>DOM, short for &quot;Document Object Model,&quot; is a standard convention which specifies how web
+						browsers should translate the elements in an HTML text document into elements in a tree-like
+						structure. The HTML structure displayed in Chrome Developer Tools is in essence a visual
+						representation (in a form closely resembling an HTML document) of the DOM for a webpage.</p>
+						<p>I read elsewhere, including on the W3C (World Wide Web Consortium) website, that the DOM
+						is an &quot;API&quot; (Application Programming Interface) -- if I understand correctly, the DOM can be
+						thought of as a set of rules (in the form of a piece of code that a web browser understands)
+						defining what web browser applications should do with HTML files.</p>
+						<p>The tree-like relationship of a page&apos;s HTML elements, or in other words the DOM of that
+						page, can also represented as a block diagram:</p>
+						<div class="graphic">
+							<img src="blockdiagram.JPG" alt="block diagram">
+						</div>
+				</div>
+				<div>
+				  <h2>Getting More Familiar with HTML and CSS</h2>
+					 <blockquote> 
+						<div>
+						  <h3>Visualizing Code - Slicing Up an Existing Webpage</h3>
+							 <p>It can be a useful exercise for a web developer to analyze the structure of an
+							 existing webpage by drawing rectangles, or &quot;boxes,&quot; around all of the page&apos;s visible
+							 contents. To go about this process in a more tactile way, one could even print the page
+							 and cut out the boxes with scissors.</p>
+							 <p>The process is straightforward and should start with identifying the largest boxes,
+							 i.e. the largest box representing the entire page, and secondary boxes representing grouped
+							 elements: for instance, one might draw a single box around separate images that all appear
+							 to be aligned on a horizontal plane. Continue the process by whittling down to smaller and
+							 smaller boxes.</p>
+							 <p>Going through this effort can give a programmer a general sense for what the HTML code
+							 for a page might look like (especially in terms of the structure of &lt;div> and &lt;img> elements,
+							 visible contents, and some CSS parameters). This also seems like it would be a very practical
+							 method for getting started on coding a new webpage from a graphical mockup.</p>
+						</div>
+						<div>
+						  <h3>Visualizing a Webpage - Exploring Chrome Developer Tools</h3>
+							 <p>Chrome Developer Tools allows users to view HTML, CSS and Javascript code for any webpage 
+							 (so far as I can tell), in split-screen format alongside or underneath the visible page. 
+							 It should be noted that that the code displayed is not the actual code for the page, but 
+							 the tree-like HTML structure of the page as Chrome interprets it (although it seems to me 
+							 it could be very similar to the original code in many cases).</p>
+							 <p>A couple of important points a programmer should consider when exploring the inner-workings 
+							 of a page in this way:</p>
+								<blockquote>
+								  <p>1. Not all of the elements in the HTML structure are visible on the page. Like the 
+								  &lt;head> element, for example.</p>
+								  <p>2. All of the elements are rectangular: &quot;everything on the web is boxes.&quot; This becomes 
+								  apparent when one mouses-over a &lt;div> element in the HTML tree, the related element 
+								  on the page immediately gets a rectangular highlight.</p>
+								  <p>3. All of the text that is visible on the page can also be found in the HTML tree if 
+								  one digs deep enough. This is done by clicking on the triangle icons to display hidden 
+								  branches of the structure (and in many cases additional triangle icons indicating 
+								  more branches yet).</p>
+								</blockquote>
+							 <p>In addition to providing insight into the HTML structure of a page, Developer Tools also allows 
+							 users to view CSS Styles for that page, including the ability to change attribute values and
+							 immediately see the results in the page frame.</p>
+						</div>
+					 </blockquote>
+				</div>
+				<div>
+				  <h2>Use a Source Code Editor</h2>
+						<p>Although HTML and CSS are in fact plain text files which can be created and edited with a simple 
+						text editor like Windows Notepad, it is generally recommended that programmers use text editors 
+						specifically designed for computer programming. The code editor recommended in this course is 
+						Sublime Text 2, which features automatic coloration of different HTML components like tags and 
+						text content, as well as other visual aids like line numbers and indent guides. Using a code editor 
+						with such features can assist a programmer in writing programs which are both clean and 
+						comprehensible.</p>
+				</div>
+		  </div>
+		  	<br><!-- spacer -->
+		  <div>
+		  	<h1>Lesson 3: Adding CSS Style to HTML Structure</h1>
+		  		<div>
+		  			<h2>Avoiding Repetition</h2>
+		  				<p>CSS stands for &quot;Cascading Style Sheets.&quot; It is a programming language which allows programmers 
+		  					to avoid repetitive code, in large part through the use of classes. When several elements in an 
+		  					HTML document given the same class name, a single block of CSS code can apply to that entire group 
+		  					of elements. In this way, those elements will appear similarly-styled when displayed by a browser. 
+		  					In addition to classes, CSS rules can also be applied to standard HTML tags like &lt;p> and &lt;h1>.</p>
+		  		</div>
+		  		<div>
+		  			<h2>&quot;Cascading&quot; and Inheritance</h2>
+		  				<p>To describe what the &quot;Cascading&quot; in CSS means: CSS rules which apply to a specified element 
+		  					(ancestor) will &quot;cascade&quot; down (imagine a waterfall) and apply to nested elements (descendants), unless more specific CSS rules are defined for those nested elements. To think of this in a slightly different way: the more 
+		  					specific the CSS rule, the higher the precedence. The &quot;cascading&quot; behavior of CSS is yet another way 
+		  					in which the language reduces repetitive code, promotes faster page-loading, and lower development 
+		  					costs.</p>
+		  					<p>This ancestor-descendent behavior is also referred to as &quot;Inheritance.&quot; Inheritance generally 
+		  						applies to text-related properties, but not to box-related properties.</p>
+		  					<p>In addition to Inheritance, web browsers will also give precedence to CSS style rules in the 
+		  						following order with inline style code receiving the highest priority:</p>
+		  						<blockquote>1. Browser default style sheet<br>
+		  						2. External style sheet<br>
+		  						3. Internal style sheet<br>
+		  						4. Inline style code
+		  						</blockquote>
+		  					<p>Regarding browser default styles: there are currently many differences in the default styles of 
+		  						the most popular web browsers, which obviously is a dilemma for web developers. There is a push 
+		  						within the programming community to rectify this situation by introducing a universal default 
+		  						style sheet.</p>
+		  		</div>
+		  		<div>
+		  			<h2>Where to Write CSS Code</h2>
+		  				<p>When possible, a programmer should create an external CSS document in the same directory as its 
+		  					related HTML documents (or perhaps in another directory which can be accessed by the browser). Any 
+		  					HTML documents which will use the external CSS file should contain a &lt;link> tag with the CSS filename 
+		  					(the &lt;link> tag should be nested inside of the &lt;head> element) ; this instructs the browser on where 
+		  					to find the external document containing all of the needed CSS code. This approach lends itself to 
+		  					clearer HTML code, and makes future style adjustments fairly easy.</p>
+		  				<p>Alternatives to the above approach are internal style sheets (within the &lt;head> of the HTML document),
+		  				 	and inline style (by way of nesting CSS code within a &lt;style> element). However, these methods should 
+		  				 	generally be avoided as they don’t offer as much benefit in terms of eliminating repetition compared with 
+		  				 	using external style sheets.</p>
+		  		</div>
+		  		<div>
+		  			<h2>CSS Syntax Features</h2>
+		  				<p>Selectors specify which HTML elements on a page styles will be applied to. Examples could be a standard 
+		  					HTML tag like &lt;p> or a user defined class name, in the form &quot;.descriptive_name&quot;</p>
+		  				<p><em>Properties</em> are the stylistic (visual) attributes for which a <em>value</em> or rule can be declared. CSS 
+		  					property examples are &quot;font-weight&quot; and &quot;background-color,&quot; among what appear to be at least a couple hundred others. A property-value pair form a <em>declaration</em>.</p>
+		  				<p>An important note for those programming in CSS (and in other languages): it is impossible and unnecessary 
+		  					to get wrapped up in memorizing all of the properties and possible values that make up the language before 
+		  					attempting to use it -- one should go ahead with programming in CSS and get comfortable with frequenting 
+		  					online documentation as needed. The CSS reference linked in this lesson:
+		  				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a>
+		  				</p>
+		  		</div>
+		  		<div>
+		  			<h2>HTML Semantics</h2>
+		  				<p>It is best to use HTML tags which are semantically appropriate for the content contained within that
+		  				 	element. That is to say, whenever possible, the chosen tag should have an intended use which is related
+		  				 	to the content type -- like using &lt;p> for a paragraph of text, or &lt;h1> for a title, for instance.</p>
+		  		</div>
+		  		<div>
+		  			<h2>The Box Model</h2>
+		  				<p>The Box Model, which as far as I can tell applies to basically every HTML element, block and inline 
+		  				  alike, consists of four concentric rectangles:</p>
+		  				  <blockquote>1. In the center is the <em>content</em> area, generally used for text, images, or other 
+		  				  	contents which appear on the webpage.<br>
+		  				  	2. Surrounding the content, is the <em>padding</em> rectangle, which clears an area directly around the 
+		  				  	content and is affected by the background-color or background-image of the box.<br>
+		  				  	3. The <em>border</em> is the rectangular area which surrounds the content and padding.<br>
+		  				  	4. The <em>margin</em> clears a transparent area around the border. The margin can be thought of as the 
+		  				  	space between boxes.
+		  				  </blockquote>
+		  				<p>The total width an HTML box element will occupy on the screen is equal to the sum of the content, 
+		  					padding, and border widths; consequently, always having to keep the other two components in mind when 
+		  					making changes to one makes planning a page layout more challenging for developers.</p>
+		  				<p>The relatively recent CSS rule &quot;border-sizing: border-box&quot; makes the calculation of element size much 
+		  					easier, by including the border and pattern sizes, which makes it easier to layout boxes on the page. Just 
+		  					set the size of the overall box.</p>
+		  				<p>Box sizes can be set to a fixed number of pixels, or a percentage (in the case that they should automatically
+		  				 resize based on the size of the browser window); in the case of percentage sizes, boxes are often given a 
+		  				 max-width attribute so that they can expand only up to a certain pixel width.</p>
+		  		</div>
+		  		<div>
+		  			<h2>Positioning Boxes</h2>
+		  				<p>A good technique for distributing boxes horizontally within a &lt;div> is to use the CSS Flexbox Layout 
+		  					module, most simply by adding the rule &quot;display: flex&quot; to a style sheet. For this method to work properly, 
+		  					the child elements need to be given a width smaller than the default 100% (via the &quot;max-width&quot; 
+		  					CSS property). Flexbox can be used in this way to override the default vertical-based behavior of divs, where nested divs are typically laid out one on top of the other. Flexbox appears to offer an abundance of features for 
+		  					distributing, automatically resizing, and wrapping child elements within a container element in any number 
+		  					of ways (it&apos;s not just for distributing and aligning horizontally, as was demonstrated in the lesson).</p>
+		  		</div>
+		  		<div>
+		  			<h2>Browser Prefixes</h2>
+		  				<p>For some newer CSS properties like flexbox and &quot;border-sizing: border-box&quot; to work in certain browsers, it 
+		  					may be necessary to include what is called a &quot;browser prefix&quot; in the related CSS style declaration block which tells the browser to add support for that property. For example, flexbox is fully implemented and works by 
+		  					default in newer versions of Chrome and Firefox, but to get the feature to work in Safari one should add the 
+		  					following prefix to their CSS: &quot;display: -webkit-flex;&quot;.</p>
+		  		</div>
+		  		<div>
+		  			<h2>Code, Test, Refine</h2>
+		  				<p>Work from big to small: when working from a design mock or some other form of instruction for coding a 
+		  					webpage, begin by identifying the boxes, then identify similar styles and semantic elements. Likewise, when 
+		  					beginning to code the page, start with the general layout of boxes (HTML) and then apply styles (CSS), 
+		  					fine-tuning from the biggest (or most general) style properties (like background-color, major box positioning 
+		  					adjustments, and title text) to smaller-and-smaller details (perhaps font-family, drop-shadow). By reviewing 
+		  					the updated page in a browser along the way, continue to fix things and fine-tune until the page styling 
+		  					appears as desired.</p>
+		  				<p>In addition to viewing the updated page in a browser, Chrome Dev Tools allows a developer to test different 
+		  					attributes and values prior to updating the actual code.</p>
+		  		</div>
+		  		<div>
+		  			<h2>Validate Your Code</h2>
+		  				<p>It&apos;s important to verify HTML and CSS in order to make sure that it is error-free and that it complies 
+		  					with browser standards.</p>
+		  					<blockquote>To verify HTML: <a href="http://validator.w3.org/#validate_by_input">http://validator.w3.org/#validate_by_input</a><br>
+		  						To verify CSS: <a href="http://jigsaw.w3.org/css-validator/#validate_by_input">http://jigsaw.w3.org/css-validator/#validate_by_input</a>
+		  					</blockquote>
+		  		</div>
+		  	</div>
+		  	<br><!-- spacer -->
+		  <div>
+		  	<!-- footer element probably not necessary but used for semantic purposes -->
+		  	<footer>
+		  		<!-- spans used to reduce line spacing in footer -->
+  				<span>S. Neil Strain 2015</span>
+  				<span>Contact: <a href="mailto:neilstrain@gmail.com">neilstrain at gmail dot com</a>.</span>
+				</footer>
+			</div>
+		</body>
+</html>
