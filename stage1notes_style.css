@@ -54,7 +54,8 @@ html {
 				-360px 0px 15px #eaf754, -440px 0px 20px yellow;
 }
 
-div {
+/* new lessons are nested inside div of class .lesson */
+.lesson {
 	/*transparent yellow background - r,g,b, last value is alpha 
 	between 0.(completely transparent) to 1.0 (not transparent)*/
 	background-color: rgba(234,247,84,0.15);
@@ -62,6 +63,27 @@ div {
 	/*layered look & rounded corners */
 	padding: 14px;
 	border-radius: 25px;
+}
+
+/* topics are a subdivision of Lessons. topics nested are inside div of 
+	class .topic */
+.topic {
+	background-color: rgba(234,247,61,0.15);
+	padding: 20px;
+	border-radius: 21px;
+}
+
+/* sub_topics are a subdivision of topics. sub_topics are nested inside of divs
+	of class .sub_topic */
+.sub_topic {
+	background-color: rgba(234,247,44,0.15);
+	padding: 20px;
+	border-radius: 17px;
+
+	/* to get deeper indent: */
+	margin-left: 50px;
+	margin-right: 30px;
+	display: inline-block;
 }
 
 h1 {
@@ -88,27 +110,53 @@ h2, h3 {
 	text-shadow: 1px 1px 15px #82f52c, 7px 7px 40px #82f52c;
 }
 
-p, blockquote {
-	/* main font of paragraph text content. blockquotes were used for indentation only */
+p {
+	/* attributes of paragraph text content */
 	color: #11083d;
 	font-family: helvetica;
 }
 
-/* default style for displayed graphics is centered with a border around the image.
-	image should be nested within container tag (like div) of class graphic. */
+/* default style for displayed graphics with a border directly around the image, 
+	and transparent colored box with rounded corners around the solid image border.
+	image should be nested within container tag of class graphic. */
 .graphic { 
-	text-align: center;
+	background-color: rgba(234,247,44,0.15);
+	padding: 15px;
+	border-radius: 17px;
+	display: inline-block;
 }
 
 img {
 	border: 1px solid yellow;
 }
 
-/* only used <span> for footer information, because I wanted the line spacing to be closer 
-than with <p> */
-span {
-	/*display:block used to get each span on new line */;
+/* use as class for outer containter for centering images or other content */
+.centered_content {
 	display: block;
 	text-align: center;
 	font-size: 95%;
+}
+
+/* decimel list for ol */
+.list_numbers {
+	list-style-type: decimal;
+	color: #11083d;
+	font-family: helvetica;
+}
+
+/* circle list for ol */
+.list_bullets {
+	list-style-type: circle;
+	color: #11083d;
+	font-family: helvetica;
+}
+
+/* styling of inline code like when <TAG>s are mentioned */
+.inline_code {
+	display: inline-block;
+	color: #11083d;
+	font-family: helvetica;
+	background-color: rgba(211,211,211,0.2);
+	border-style: dashed;
+	border-width: 1px;
 }
