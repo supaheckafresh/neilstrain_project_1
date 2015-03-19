@@ -1,0 +1,35 @@
+['Lesson 2.3: Input → Function → Output', 
+
+['Functions / Procedures', 
+
+'A function is a piece of code that does something with inputs. Most functions include a return statement which allows the function to output a value.<p>Making a function in Python involves writing code in the basic format below:</p>
+
+<span class="centered_content">
+<span class="inline_code">def &lt;function>(&lt;input>,&lt;input>,...):
+		return &lt;output></span>
+</span>
+
+<p>Where the programmer specifies the name of the function, the names of the inputs (these can be thought of like declaration statements for input values yet unknown), and the return statement output.'], 
+
+
+
+['Making Versus Using Functions', 
+
+'Using a function involves calling the function, perhaps by using the print statement or by calling the function inside of another function, and giving it actual input values. The code for the print example might take the form:</p> 
+
+<span class="centered_content">
+<span class="inline_code">print <function>(<input>,<input>)</span>
+</span>
+
+<p>Where actual input values are provided (of types, ranges, etc. that are expected by the function). When the above line of code is executed, if the function works as intended then some value should be displayed.'], 
+
+
+
+['Functions Help Programmers Avoid Repetition', 
+
+'Functions are great for avoiding repetition, because a programmer can just call a function by it’s name over and over again without needing to duplicate any of the underlying code.'], 
+
+
+['What if There is No Return Statement?',
+
+'If a function doesn’t have a return statement, then it basically does nothing (even though it is technically still a function, and the computer may still waste resources performing the function’s instructions).']]]

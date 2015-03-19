@@ -1,0 +1,99 @@
+['Lesson 2.5: Structured Data: Lists and For Loops', 
+
+[
+
+['What is a List?', 
+
+'A list provides a way of storing mutable structured data. A list in Python is can be written as follows:
+
+[‘item1’, ‘item2’, ‘item3’]
+
+
+Note that the any of the list contents above, like the string ‘item1’, can be replaced with expressions of any other type -- numbers, booleans, expressions, or other lists. The list contents above would also be assigned index values [0], [1], and [2] -- this works in an analogous way to indexing with strings. However, it is important to realize that strings are different in that they are sequences of characters, and cannot include other data types. Strings are also immutable.'],  
+
+
+['What is Mutability?', 
+
+'Mutability refers to whether or not an object’s value can be changed.',  
+
+[['Immutable Objects: Lists and Numbers', 
+
+'Strings and numbers are immutable objects, meaning that their values cannot be changed. Take the code below, for example: 
+
+p = 45
+q = 45
+print p → 45
+p = 50
+print p → 50 
+print q → 45
+
+In the above example, we first assign the variables **p and **q to the number 45. When we re-assign the variable **p to the number 50, this does not change the value 45; it only makes the variable **p refer to a different number. The number 45 still exists, as we can see with the statement **print q → 45. The same would be true had we assigned these variables to random strings. All numbers exist and can be referred to via variables; likewise, all imaginable combinations of characters exist and can be referred to via variables.'],  
+
+['Mutable Objects: Lists', 
+'Lists are mutable objects, meaning that their values can be changed. For example, in Python the built in **append operation mutates an existing list by adding elements to that list:
+
+	<list>.append(<element>) 
+Using this format, expression in <element> becomes the **[n]**th index of of a list of length **n, or the [0]th index of a previously empty list (**[]). If the <element> being appended is itself another list (or a variable that refers to a list), this still only appends a single element containing the list.
+
+Another way of mutating a list would be to use code such as the following:
+
+test_list = [‘h’, ‘e’, ‘l’, ‘l’, ‘o’]
+test_list[0] = ‘Y’
+print test_list → [‘Y’, ‘e’, ‘l’, ‘l’, ‘o’]
+
+The above behavior in fact changes the actual list which the variable **test_list refers to.']]],  
+
+['Aliasing',  
+
+'Aliasing happens when more than one variable refers to the same object. As in the below code:
+
+x = 27
+y = x
+print x → 27
+print y → 27'], 
+
+['Concatenation with Lists', 
+
+'In contrast to the above examples which feature mutation of lists, in order to concatenate an object to a list (with the **+ operator), one could use the following code: 
+
+test_list = [‘Y’, ‘e’, ‘l’, ‘l’, ‘o’]
+new_list = test_list + [‘w’]
+print test_list → [‘Y’, ‘e’, ‘l’, ‘l’, ‘o’
+print new_list → [‘Y’, ‘e’, ‘l’, ‘l’, ‘o’, ‘w’]
+
+Concatenation does not mutate the original list; rather, it creates a new list. 
+
+We could also have concatenated a list to the original list, rather than a single character. Unlike using **append to add a list to another list, which adds a single list element containing the appended list, concatenation adds each of the elements contained in the list being added to their own index. For example:
+
+list_one = [1, 2, 3]
+list_two = list_one + [4, 5, 6]
+print list_two → [1, 2, 3, 4, 5, 6]
+print len(list_two) → 6
+
+whereas:
+
+list_three = [10, 9, 8]
+list_three.append([7, 6, 5])
+print list_three → [10, 9, 8, [7, 6, 5]]
+print len(list_three) → 4
+
+As a side note to the concatenation example above, if one actually wanted to change the value that the original variable refers to, this is possible with the **+= operator, as in the following code:
+
+list_one = [1, 2, 3]
+list_one += [4, 5, 6]    
+print list_one → [1, 2, 3, 4, 5, 6]
+
+The second statement above is really the same thing as **list_one = list_one + [4,5,6], which involves the concatenation **+ operator. For this reason, we are still creating a new list, and not actually performing mutation.'],  
+
+
+['For Loops', 
+
+'A **for loop is a construct that allows a block of code to iterate over structured data, including the contents of a list, one element at a time. The below function, which incorporates a **for loop, returns the sum of any list of numbers:
+
+def sum_list(any_num_list):
+    total_so_far = 0
+    for next_element in any_num_list:
+        total_so_far = total_so_far + next_element
+    return total_so_far
+
+print sum_list([1, 2, 3, 4, 5]) → 15']]]

@@ -1,0 +1,62 @@
+['Lesson 2.4: Decisions and Repetition: If and While', 
+	[
+
+['What the Heck is a Boolean?', 
+
+'A boolean is a built in a data type in Python (and in virtually every other programming language, from what I’ve seen) including the values True and False. True is equal to the integer value 1, and False is equal to 0.'],  
+
+['Conditional Code', '',
+
+[['If Statements', 
+
+'If statements are used to control when a block of code is executed. An if statement in Python takes the basic form:
+
+if <TestExpression>: 
+		<Block> 
+
+Where the code represented by <Block> is only executed when the if<TestExpression> code evaluates to True.'], 
+
+
+
+	['While Loops', 
+
+'While loops are used for repeatedly executing a block of code. In Python, while loops take the form:
+
+while <TestExpression>: 
+		<Block>
+
+Where the code represented by <Block> is only executed when the while<TestExpression> expression is True.
+
+Loops can be broken with a **break statement, which instructs the computer to execute the proceeding line of code even if the **while test expression is still true. '], 
+
+
+['Else Statements', 
+
+'An ##code: else: statement is used for executing a block of code in the instance that a preceding conditional expression (like **if** or **while**) evaluates to False.'], 
+
+['Equity comparisons',  
+
+'Mathematical equity comparison operators, such as < (less than), > (greater than), <= (less than or equal to), != (not equal), and == (equality) operate on numbers (or expressions that evaluate to numbers) and output a boolean value. It should be noted that the equality operator == is different than the assignment operator = in python. == is used literally to test for equality -- that is whether two expressions evaluate to the same number (i.e. 2 == (1+1) → TRUE); whereas = is used to assign a variable name to any expression (i.e. two = 3).'],  
+
+	['Other constructs: Or and And:', 
+	
+'Or allows a conditional statement to evaluate to True when at least one of its test expressions is True. 
+
+Combining boolean values with an **or operator results in the following values (Boolean Or). I believe the below logic is also called a “truth table”:
+	
+True or False → True
+False or True → True 
+True or True → True 
+False or False → False
+
+The way Python deals with **or statements is that if the first expression is True, the entire conditional statement evaluates to True and the second expression is not even evaluated. This is important because the entire expression is True even if the second expression represents an undefined variable, or some expression that would otherwise result in an error. On the other hand, if the first expression is False, then the value of the entire conditional statement is the value of the second expression. In this latter case, it is possible for the second expression to throw an error if the second expression includes some undefined variable or out-of-range value, etc.
+
+The And operator is used in a syntactically similar fashion to Or, except that And allows a conditional statement to evaluate to True only when all of its test expressions are True. The behavior of combining boolean values with an **and operator is as follows:
+	
+	True and False → False
+	False and True → False
+	True and True → True
+	False and False → False']
+		]
+	]
+]
