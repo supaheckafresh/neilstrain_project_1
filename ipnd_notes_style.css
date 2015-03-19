@@ -9,12 +9,12 @@ html {
 @font-face {
 	/* custom font for title and headers */
     font-family: geosansLight;
-    src: url(GeosansLight.ttf);
+    src: url("fonts/GeosansLight.ttf");
 }
 
 .page_defaults {
 	/* background image. original graphic I put whipped up in paint.net */
-	background-image: url("background.png");
+	background-image: url("images/background.png");
   	background-attachment: fixed;
   	background-size: cover;
 
