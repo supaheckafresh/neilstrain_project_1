@@ -1,0 +1,34 @@
+['Lesson 1: Introduction to Serious Programming',
+
+[['What is a Computer?',
+
+'A computer is a machine that can be “programmed.” So, we can think of computers as very fancy toasters (well, maybe not exactly…).'],
+
+['Computers are Stupid, yet Amazing',
+
+'Computers do exactly and only what we tell them to do. A computer without a program is less useful than a toaster. However, unlike a toaster, with good programming a computer can carry out any computations imaginable. Modern computers can do so at a rate of billions of instructions per second.'],
+
+['What is a Program?',
+
+'A program is a set of specific instructions (or sequence of steps) to be carried out by a computer.'],
+
+['What is Computer Science?',
+
+'Computer Science is the study of solving problems through computing. This involves breaking problems into smaller pieces, and then defining those constituents of the larger problem as sequence of precise steps which can be carried out by a computer (a computer program). Computer programming is central to computer science. However, these are distinct fields in that computer science also involves the theoretical foundations of problem solving through computing, as well as the theory of computation in general. Or perhaps rather than thinking of the fields as separate, we can think of computer programming as a branch of the broader field of computer science.'],
+
+['Programming Languages',
+
+'Programming languages provide a means of instructing computers to carry out a sequence of computations. High-level programming languages like Python allow programmers to write code that in many ways resembles natural languages like English, albeit without any of the ambiguity and verbosity inherent to natural languages. “High-level” refers to the concept of abstraction, which makes it appreciably easier to write and understand such languages as compared to their “low-level” counterparts including machine code, assembly code, and numerical machine code (at the level of 1’s and 0’s).##PThere are many high-level programming languages. Each has its own vocabulary or grammar (set of strings or symbols) and syntax (the allowable combinations of these strings or symbols). ##P Fortran was the first high-level programming language -- it was developed by John Backus in the 1950’s while he worked at IBM. Backus is also credited with the creation of Backus-Naur form, which is a notation technique for describing the syntax rules of any language in a very clear and concise way.'],
+
+['Interpreters and Compilers',
+
+'Due to their high-level nature, languages like Python are intended to be run as input to a separate program called an interpreter, or sometimes a compiler in the case of various other languages; both interpreters and compilers are basically programs which translate high-level code into low-level code which a computer’s central processing unit can actually understand.  I’m guessing you’d have to be pretty smart to create a new programming language -- and that much of the work involves developing a powerful interpreter or compiler. The main difference between interpreters and compilers, as I understand from this lesson, is that interpreters allow programs to run “on-the-fly,” while compilers must first compile a program before it is run. But I’m sure this is a simplistic understanding & that each has its advantages and disadvantages.'],
+
+['Python',
+
+'Python is the programming language we are using in this course. The name comes from “Monty Python.” Python is an interpreted language (meaning it runs through an interpreter). I remember reading somewhere that Python is the main scripting language at Google.'],
+
+
+['Debugging',
+
+'System for finding and fixing programming mistakes. Reviewing code, predicting what it will do (and/or maybe what it is intended to do) & if it will work or not. Run the program. If you get an error, try to decipher the error and fix the code accordingly. Then run program again, repeating the above process.']]]

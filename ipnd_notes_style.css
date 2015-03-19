@@ -25,10 +25,10 @@ html {
   	font-family: geosansLight;
 }
 
-.title_h1 {
+.course_title_h1 {
 	/* style for main page title */
 	text-align: center;
-	font-size: 300%;
+	font-size: 250%;
 	color: #4425e6;
 	padding: 10px;
 	margin: 1px;
@@ -134,7 +134,7 @@ img {
 .centered_content {
 	display: block;
 	text-align: center;
-	font-size: 95%;
+	/*font-size: 95%; */
 }
 
 /* decimel list for ol */
@@ -154,9 +154,18 @@ img {
 /* styling of inline code like when <TAG>s are mentioned */
 .inline_code {
 	display: inline-block;
-	color: #11083d;
-	font-family: helvetica;
-	background-color: rgba(211,211,211,0.2);
+	text-align: left;
+	/* color: #11083d; */
+	color: #f2e56e;
+	font-family: 'lucida console'; 
+	/*background-color: rgba(211,211,211,0.2);*/
+	background-color: rgba(10,22,98,0.65);
 	border-style: dashed;
 	border-width: 1px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin: 1px;
+	font-size: 90%
 }
