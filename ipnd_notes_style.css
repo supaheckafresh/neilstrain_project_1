@@ -28,6 +28,8 @@ html {
 
     @media (max-width: @iphone-screen) {
         background-attachment: scroll;
+        background-size: 50%;
+        background-position: center center;
     }
 
 
