@@ -1,0 +1,97 @@
+['Lesson 3.3: Writing Our Own Classes', 
+
+[['Designing a New Class', 
+'When preparing to code a new class definition, it is a good practice to make note of what instance variables and instance methods we will need for the class. For the class Movie example from the course, we decided this class should remember data points like title, youtube_trailer, storyline, poster_image, and reviews. These are examples of instance variables. We also decided that class Movie should define an instance method for showing the movie trailer, called show_trailer().'], 
+
+['Creating a New Class', 
+'To define the class Movie, as described above, we start with the Python keyword class:</p>
+	class Movie():
+
+<p>We then continue with our class definition by adding a constructor which will allow new instances of the class Movie to operate in memory; in this case we will define an __init__() function which will serve as the constructor:</p>
+	class Movie():
+		def __init__():
+
+<p>For the constructor’s first argument, it is a strong convention in Python to use the variable name self##. Self (or another name like movie_instance, as the case may be) can be thought of as the object or instance being created by the constructor. We are given the impression in the course that the name self is used so commonly in Python class definitions that it is often mistakenly considered to be a predefined keyword.</p>
+	class Movie():
+		def __init__(self):
+
+<p>We continue defining the constructor method by adding instance variables, which describe some of the data attributes which may be defined for instances of the class (or the things to remember, as described by the course instructor):<p>
+	class Movie():<br/> 
+		<&emsp><&emsp>def __init__(self):<br/> 
+			<&emsp><&emsp><&emsp><&emsp>self.title<br/>     		
+			<&emsp><&emsp><&emsp><&emsp>self.storyline<br/> 
+			<&emsp><&emsp><&emsp><&emsp>self.poster_image_url<br/> 
+			<&emsp><&emsp><&emsp><&emsp>self.trailer_youtube_url
+
+<p>We must then define additional input arguments (inside of the ellipses, after self) whose values __init__ will pass to the instance variables. We also write assignment statements to tell the __init__ method which instance variable each argument gets passed to. Adding this code allows the instance variable data points to be initialized whenever a new object of the class is instantiated:</p>
+	def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):<br/>
+			<&emsp><&emsp>self.title = movie_title<br/>	
+			<&emsp><&emsp>self.storyline = movie_storyline<br/>
+			<&emsp><&emsp>self.poster_image_url = poster_image<br/>
+			<&emsp><&emsp>self.trailer_youtube_url = trailer_youtube
+
+<p>Regarding the example above, while I do understand that the arguments and instance variables are separate entities, I find it slightly annoying that in this first class Movie example, they are given nearly identical, yet still slightly different variable names (consider trailer_youtube versus trailer_youtube_url).</p> 
+<p>The below code demonstrates one example instance of the class Movie:<p>
+	toy_story = media.Movie(“Toy Story”, 
+“Toys Come to Life”, 
+“http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg”
+"https://www.youtube.com/watch?v=KYz2wyBy3kc")
+<p>In the above example, the instance being initialized is named “toy_story” -- so, ##self = toy_story, in this case. The other input arguments provided in the ellipses (“Toy Story”, “Toys Come to Life”, etc.) take the place of the __init__ arguments (“movie_title”, “movie_storyline”, etc.). The values of these arguments are in turn passed one-after-the-other to the appropriate instance variables -- doing this initializes each of the instance variables.'],  
+
+['Adding Class Methods', 
+'Continuing with the above example, we can add to this class definition a method to show a movie’s trailer video:</p>
+	def show_trailer(self):
+        		webbrowser.open(self.trailer_youtube_url)
+<p>Note that for the above method to work, we will also add an import statement for the webbrowser module at the beginning of the class definition: ##import webbrowser'], 
+
+['Google Python Style Guide', 
+'The Google Python Style Guide provides conventions on basically every aspect of Python code, from proper naming practices to indentation. Here is a link to this website: <a href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html">http://google-styleguide.googlecode.com/svn/trunk/pyguide.html</a>'], 
+
+['Class Variables', 
+
+'In cases where variables should be shared by all instances of a class, we can define class variables. In our class Movie example, if we wanted to add a list of valid ratings to every instances of that class, we could add the following class variable assignment statement (this will be written below the ##class Movie(): statement, and just above the __init__ method):</p>
+
+VALID_RATINGS = [“G”, “PG”, “PG-13”, “R”]
+
+<p>Google python style guide recommends using ALL CAPS for class variables.</p> 
+
+<p>In Python all classes come with some preexisting class variables. One example is the class variable for documentation __doc__ .</p> 
+
+<p>Here is an example of adding documentation to class Movie:</p>
+
+class Movie():
+  	  """ This class provides a way to store movie-related information"""
+
+<p>Python will interpret the above triple-quoted string as the __doc__ for ##class Movie. Notice that we do not need to write __doc__ anywhere in the class definition code. Once the above code has been added, we can view the documentation for this class using the print statement:</p> 
+
+print Movie.__doc__
+
+<p>Some other examples of preexisting class variables are  __module__ and  __name__ .</p>'],  
+
+
+['Inheritance', 
+
+'Inheritance describes what happens when we create a subclass (child class) that inherits attributes and behaviors (i.e. class variables, instance variables, and methods) of an already existing class (parent class). This is conceptually similar to the idea of inheritance of visual properties in CSS -- except that in CSS inheritance is assumed to be true for any new statements/objects unless explicitly stated otherwise. In Python, there is a particular syntax, described below, for defining the child-parent relationship of classes. In both languages, inheritance offers similar benefits, in that can be used to eliminate unnecessary code (in Python, this has to do with the fact that we are reusing the parent class code), and can enhance readability.</p>
+
+<p>Here is an example involving inheritance:</p>
+	
+	class Parent():<br/> 
+		def __init__(self, last_name, eye_color):<br/> 
+			self.last_name = last_name<br/> 
+			self.eye_color = eye_color<br/><br/> 
+
+	class Child(Parent):<br/> 		
+		def __init__(self, last_name, eye_color, number_of_toys):<br/> 
+			Parent.__init__(self, last_name, eye_color)<br/> 
+			self.number_of_toys = number_of_toys
+
+<p>In order to instruct Python that subclass ##Child should inherit from class ##Parent, notice above that the name of the parent class, ##Parent in this case, is written inside of the ellipses. To initialize the first three instance variables of subclass Child (including ##self), we reuse the parent class code by calling the __init__ method of the class Parent -- as a result we are minimizing the overall length of the subclass definition.</p>  
+
+<p>Notice that the subclass Child inherits all of the instance variables from its parent class, and that we can declare additional variables like number_of_toys, in this case. Likewise, If the definition for class Parent contained any methods, subclass Child would be able to use these methods without requiring any additional code in its definition.</p>'], 
+
+
+
+
+['Method Overriding', 
+
+'In the case where a subclass contains a method of the same name as a method of its parent class, the subclass method will override the parent method (when that method is called for an object of the subclass, of course). This behavior is called method overriding.']]]

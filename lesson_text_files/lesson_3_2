@@ -1,0 +1,38 @@
+['Lesson 3.2: Working with Classes and Objects', 
+
+[['Python Classes', 
+
+'A class is like a blueprint for creating objects. To describe how this works in more detail, a class is a block of code including a constructor which defines how an object or instance of that class will be created and what variables it will have, and also functions (referred to as methods in this context) defining the available behaviors of objects of that class. A class definition is like a blueprint; the class definition code serves as a model and doesn't really do anything -- it is only when an object of that class is initialized that any functions of a class actually get used.</p>
+<p>When functional programming alone does not provide the most elegant solution to a problem, a programmer may also consider using classes -- especially when the program in question (or parts therein) can naturally be conceptualized as an “object” of some kind. This approach to programming is referred to as Object Oriented Programming. By grouping together logically-related behaviors and attributes in the form of classes, we can neatly reduce multiple lines of code to a single descriptive name which is both easily understood & immediately reusable throughout the rest of our code.</p> 
+<p>Object oriented programming provides a useful approach to refactoring procedural code, i.e. reworking code that contains only functions into code that makes use of classes. More importantly, object oriented thinking can be performed at the very outset of preparing to solve a problem -- for example, it may be the case that the most essential “steps” involved in solving a problem may be thought of in terms of each being their own class. By the most essential “steps,” I’m referring to the top-level, easiest to conceptualize steps and not necessarily finer details which may equate more appropriately to class methods.  Another example might be a program that must offer many “features” -- each “feature” might be packaged into its own class, which itself might contain many methods and perhaps subclasses describing in finer detail the available behaviors of each feature category. I can imagine many other ways to think about programs as being a grouping of constituent parts. Object oriented thinking may also involve writing high-level pseudocode describing a simple and organized approach to the task at hand.</p>
+<p>Most if not all of the Python Standard Library modules contain classes that are ready to use. The first letter of a class name is always capitalized:
+frederick = turtle.Turtle()
+<p>“Turtle## above is a class contained in the turtle module. As it was explained in the course, the module ##turtle represents a folder in the Python Standard Library, and inside that folder there is a file which contains a class definition called ##class Turtle() (or something similar). Class ##turtle.Turtle()## definition contains methods that allow users to draw shapes on a window (it’s fun!).</p>
+<p>For some classes, arguments for the instance variables of the class must be provided inside of the elipses ()##, but it doesn’t seem like Turtle() requires this. I did look up the code for ##class Turtle(object):## found in PythonTurtle## on GitHub (I’m actually not sure if this is the same code as class Turtle() in the Python distribution which I’m using -- but my guess is PythonTurtle uses very similar code) -- it looks like inside of the __init__ function in the class definition of Turtle()## does have instance variables, but that each instance variable is assigned a default value (like self.color = "red"##).'],  
+
+['Instances or Objects', 
+'When a new instance of a class is created, the __init__() function (constructor) defined inside of the class initializes new space in memory for the object (or instance) of that class to run. As opposed to the class definition code, an object generally does something with data and returns some outputs. It is up to the programmer to specify which of the available functions of a class are used and how.</p>
+<p>The below code demonstrates how to initialize an instance of class turtle.Turtle(), which we will call ##remus:</p>
+	remus = turtle.Turtle()
+<p.>Following this line of code, we can then assign values to any of the instance variables (or override the default values in the case of Turtle()##), and also we can make our instance perform any of the methods of its class:</p>
+remus.forward(200)		# remus draws a line of 200 pixels in the direction of its current orientation
+remus.right(90)		# rorate remus orientation 90 degrees to the right
+ 
+<p>I came up with this analogy for classes and objects, which maybe isn’t the simplest analogy -- but I like it:</p>
+
+Class = the rules of standard music notation.
+Object = a musical composition (in the form of sheet music) making proper use of the rules of standard music notation. 
+
+<p>Perhaps a simpler, but still musical analogy, could be the following:</p>
+	Class = musical instrument
+	Object  = tenor saxophone'], 
+	
+['Good Naming Practices', 
+'Programmers should carefully consider what names they give to classes, functions, and variables. To start with, the name of any object should describe its purpose as clearly as possible. As we change or add to our programs, it is good idea to review existing names & make any changes needed.</p> 
+<p>Names should not contain or resemble any of Python’s reserved functions or keywords, like “init” or “def,” and also should not contain double underscores “__” as this signifies reserved Python functions. There are other considerations that I can think of, like choosing names which are searchable and at least somewhat pronounceable (and I’m sure there are many other considerations that I am not yet aware of). Putting care into what names we use makes our code more readable and usable, both for ourselves and others who might happen upon our code.'],  
+
+['External Packages / Modules', 
+'While the Python Standard Library is extensive, there are also thousands of external Python packages which we can download and use. Some are free, some are commercial. An example external module discussed in the course was Twilio, which offers utilities for sending and receiving SMS messages. From their website it looks like they offer a lot of other cool communications APIs like for voice calls and multimedia messages (picture messaging).'],  
+
+['The Class-Like Nature of Built-In “Functions”', 
+'It is true that the syntax of built-in functions like current_file = open(file)## resembles the syntax of calling a straightforward function (##new_value = some_function(object)). However, behind the scenes the open() built-in function initializes an object of type File##, which we have named ##current_file. After doing this, we can perform certain methods on the object current_file##, like current_file.read## to return the contents of that object (##read a method of the built-in function ##read()). This behavior is similar to what happens when we initialize an instance of any class & then have the object perform any of the available methods of that class. Many of Python’s other built-in “functions” create objects of various types, and can be thought of in much the same way as classes.']]]

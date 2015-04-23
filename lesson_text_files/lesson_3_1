@@ -1,0 +1,64 @@
+['Lesson 1  - Using  Functions and Modules', 
+
+[['Python’s Standard Library', 
+
+'Python comes with a Standard Library consisting of several built-in functions and many modules.</p> 
+
+The benefit of using a language like Python which is distributed with a robust library is that a programmer can start building useful apps immediately without getting bogged down with coding programs from the lowest level of abstraction up -- a process which essentially would involve building a standard library of one’s own. However, I can imagine that much of Python’s standard library came into being in much this way, through the work of many programmers over the last several years, as the language has grown in popularity.'], 
+
+['Built-in Functions', 
+
+'Built-in functions provide programmers with abstracted functions for common programming tasks, like returning the length of an object (len()##), or returning the absolute value of a number (abs()##).</p> 
+
+To use a built-in function, like open() for opening a file, one can simply type the function:</p> 
+open(“<file_location>”) → opens a file' ], 
+
+['Modules', 
+
+'The available modules provide platform-independent access to system functions like generating graphics on screen (turtle##), or accessing websites (webbrowser##). This is a bit of a generalization, as there are also modules that deal with OS-specific functions (Windows, Unix, Mac OS), and more unique utilities like a pseudo-random number generator (random##).'], 
+
+
+['Importing Modules', 
+
+'A module has to be imported before a program can use the classes and functions of that module. An import statement should be written at the top of a program as follows:</p>
+
+	import turtle 
+
+To import a only part of a module, like a certain function or class, one can use the ##from keyword in the following syntax:</p>
+	
+	from <module> import <Class_name>
+
+We can also import our own modules and classes with the import keyword. In the Movie Website example we looked at in Course 3, we imported class Movie## using the code below (the class definition was found in a file called media.py). This example also assumes that both files (media.py and whatever file we are importing that module to) reside in the same directory:</p> 
+	
+	import media'], 
+
+
+
+['Abstraction', 
+
+'Abstraction is the hiding of detail. We don’t necessarily need to understand how a module (or a built-in function) works at a low level in order to use it or experiment with it, so long as we carefully read the module’s documentation. Documentation for the Python Standard Library can be found at ##docs.python.org.##</p>
+
+In addition to the official documentation, resourceful programmers will also use Google (or other search tools) and programming community websites like stackoverflow.com to overcome coding questions and roadblocks.</p>
+
+Abstraction, relating to readily-available code, is obviously beneficial as it spares programmers the time they would otherwise have spent writing similar code. When we reuse code, we are leveraging other programmers’ time investments and hard work by implementing their working code in new applications (or perhaps we may also be improving upon their preexisting code). When I write programs, I will assume that my code will be read and reused by other programmers & I will strive to create useful and easy-to-understand abstractions.'],  
+
+['Exceptions', 
+
+'As it was explained in the course, an exception is the same thing as an error in Python, like in the following example:</p>
+
+ 	5 + "five"
+
+Traceback (most recent call last):
+ File "<pyshell#4>", line 2, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+Exceptions can occur for many reasons, but generally speaking an exception describes the situation where, during the execution of code, the Python interpreter encounters some expression or instruction that it doesn’t understand.</p> 
+
+From what I’ve looked at, it seems that there are ways to handle exceptions that avoid the disruption of an executing program -- however, in other cases Python does terminate the program & displays an error message. Error messages provide valuable information for programmers, and Python is also helpful in that the location of the error often gets highlighted in the scripting window.</p> 
+ 
+I would like to learn more about exceptions because it looks like the Python documentation distinguishes between syntax errors and exceptions. Likewise, it looks like some other programming languages treat errors and exceptions differently & I don’t think I have the preliminary knowledge to make complete sense of what I’ve read about this -- and I really don’t know if the distinction relates in any meaningful way to Python. Maybe based upon what little I know about this, I can deduce that in Python all errors are a type of exception, but not all exceptions result in errors. Is this accurate? I remember the instructor mentioned we’d be spending more time on exceptions later...'], 
+
+
+['Planning Ahead', 
+'Before coding a new program or function, it is a good practice to write down what steps (ideally the fewest possible steps) which your program might take to return a desired output or execute a particular action.</p> 
+Our instructor Kunal prompted us to do this for each of the example projects.']]]
