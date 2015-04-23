@@ -15,14 +15,11 @@ html {
 .page_defaults {
 	/* background image. original graphic I put whipped up in paint.net */
 	background-image: url("images/background.png");
-  	/*background-attachment: fixed;*/
+  	background-attachment: scroll;
 	background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100%;
-    width: 100%;
-    position: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     	
