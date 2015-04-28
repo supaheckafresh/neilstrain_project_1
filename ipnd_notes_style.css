@@ -13,7 +13,6 @@ html {
 }
 
 .page_defaults {
-	/* background image. original graphic I put whipped up in paint.net */
 	background-image: url("images/background.png");
   	background-attachment: scroll;
 	background-size: cover;

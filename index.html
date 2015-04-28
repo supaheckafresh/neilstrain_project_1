@@ -8,12 +8,8 @@
 	<body class="page_defaults">
 		<div>
 			<h1 class="course_title_h1">Stage 1: Webpages, Documents, and Structure</h1>
-			<!-- I know I'm using h1 tags for both the main title and for the lesson headers. I've added the
-		 		"title_h1" CSS class below to make the main title bigger & to add some other style properties -->
 		</div>
-	<br/> <!-- I wanted a blank space between the title box and the first lesson. <br/> seemed to be the 
-				most expedient way to do that. I've used this method below to insert spacers before each 
-				new lesson -->
+	<br/> 
 			<div class="lesson">
 	 		 	<h1>Lesson 1.1: The Basics of the Web and HTML</h1>
 				<div class="topic">
@@ -47,9 +43,9 @@
 					 <div class="sub_topic">
 						<h3>Attributes</h3>
 						<p>A programmer may be able to further specify the properties and behaviors of certain tags via their attributes, as is true with the anchor tag:</p> 
-						<span class="centered_content">
-							<span class="inline_code">&lt;a href:&quot;www.google.com&quot;>click here to go to Google.com&lt;/a></span>
-						</span>
+							<pre>
+<span class="inline_code"><code>&lt;a href:&quot;www.google.com&quot;>click here to go to Google.com&lt;/a></code></span>
+							</pre>
 						<p>Where &quot;href:&quot; is an attribute of the anchor tag, and &quot;www.google.com&quot; is the specified value of that attribute.</p>
 					 </div>
 					 <div class="sub_topic">
@@ -251,9 +247,9 @@
 			    <div class="topic">
 					<h2>How to Create a Variable in Python</h2>
 				    <p>You can make a new variable with an assignment statement, as follows:</p>
-				    <span class="centered_content">
-				    	<span class="inline_code">name = expression</span>
-				    </span>
+				    <pre>
+<span class="inline_code"><code>name = expression</code></span>
+				    </pre>
 				    <p>Note that the <span class="inline_code">=</span> in the above assignment statement means something fundamentally different than an “=” sign in an algebraic equation. In math <span class="inline_code">=</span> means equality; in Python, it means take the expression on the right side of the statement and store it in the variable name on the left.</p>
 			    </div>
 			    <div class="topic">
@@ -268,32 +264,32 @@
 			    <div class="topic">
 					<h2>Indexing Strings</h2>
 				    <p>Indexing is used to return a one character string from an existing string. The characters in a string are automatically enumerated, where the 0th character is actually the first character of the string. For example, to print the first character of any string, one can use the following Python code:</p>
-				    <span class="centered_content">
-				    	<span class="inline_code">print “this is a string”[0] --> t</span>
-				    </span>
+				    <pre>
+<span class="inline_code"><code>print “this is a string”[0] --> t</code></span>
+				    </pre>
 				    <p>Note that the <span class="inline_code">[0]</span> in the above statement can be replaced with any expression, not just with a number.</p>
 				    <p>To return characters starting from the end of the string, negative values can be used within the brackets, where <span class="inline_code">[-1]</span> returns the last character, <span class="inline_code">[-2]</span> the second-to-last, etc.</p>
 			    </div>
 			    <div class="topic">
 					<h2>Indexing Sub-Sequences from Strings</h2>
 				    <p>This is conceptually similar to indexing strings, however this method can result in strings containing more than one character. Here is how this looks in Python:</p> 
-				    <span class="centered_content">
-				    	<span class="inline_code">&lt;string>[&lt;expression> : &lt;expression>]</span>
-				    </span>
+				    <pre>
+<span class="inline_code"><code>&lt;string>[&lt;expression> : &lt;expression>]</code></span>
+				    </pre>
 				    <p>Where the first <span class="inline_code">&lt;expression>:</span> is the start index, and the second <span class="inline_code">:&lt;expression></span> is the end index.
 			    </div>
 			    <div class="topic">
 					<h2>The Find Method</h2>
 				    <p>Find is a built in Python operation that returns a value based on whether or not it finds a specified target string within a search string.</p>  
-				    <span class="centered_content">
-				    	<span class="inline_code">&lt;string>.find(&lt;string>) → number (index position)</span> 
-				    </span>
+				    <pre>
+<span class="inline_code"><code>&lt;string>.find(&lt;string>) → number (index position)</code></span> 
+				    </pre>
 				    <p>Where the <span class="inline_code">&lt;string></span> in the parenthesis is the first argument to Find.</p>
 				    <p>If the target string is found within the search string, Find will return the index number where the target string starts. If the target string is not found, <span class="inline_code">-1</span> is returned.</p>
 				    <p>Find also takes a number as a second argument, indicating at what index position of the search string it will start looking for the target string.</p>
-				    <span class="centered_content">
-				    	<span class="inline_code">&lt;string>.find(&lt;string>,&lt;number>)</span>
-				    </span>
+				    <pre>
+<span class="inline_code"><code>&lt;string>.find(&lt;string>,&lt;number>)</code></span>
+				    </pre>
 			    </div>
 			</div>
     	<br/><!-- spacer -->
@@ -303,18 +299,18 @@
 					<h2>Functions / Procedures</h2>
 				    <p>A function is a piece of code that does something with inputs. Most functions include a return statement which allows the function to output a value.
 				    <p>Making a function in Python involves writing code in the basic format below:</p>
-				    <span class="centered_content">
-				    	<span class="inline_code">def &lt;function>(&lt;input>,&lt;input>,...):  <br/>
-				    		return &lt;output></span>
-				   	</span>
+				    <pre>
+<span class="inline_code"><code>def &lt;function>(&lt;input>,&lt;input>,...):
+	return &lt;output></code></span>
+				   	</pre>
 				   	<p>Where the programmer specifies the name of the function, the names of the inputs (these can be thought of like declaration statements for input values yet unknown), and the return statement output.</p>
 			    </div>
 			    <div class="topic">
 					<h2>Making Versus Using Functions</h2>
 				    <p>Using a function involves calling the function, perhaps by using the print statement or by calling the function inside of another function, and giving it actual input values. The code for the print example might take the form:</p>
-				    <span class="centered_content">
-				    	<span class="inline_code">print &lt;function>(&lt;input>,&lt;input>)</span>
-				    </span>
+				    <pre>
+<span class="inline_code"><code>print &lt;function>(&lt;input>,&lt;input>)</code></span>
+				    </pre>
 				    <p>Where actual input values are provided (of types, ranges, etc. that are expected by the function). When the above line of code is executed, if the function works as intended then some value should be displayed.</p>
 			    </div>
 			    <div class="topic">
@@ -338,23 +334,19 @@
 					<div class="sub_topic">
 						<h3>If Statements</h3>
 						<p>If statements are used to control when a block of code is executed. An if statement in Python takes the basic form:</p> 
-						<span class="centered_content">
-						   	<span class="inline_code">
-						   		if &lt;test_expression>: <br/>
-						    		&emsp;&emsp;&lt;code_block>
-						    </span>
-						</span>
+		             	<pre>
+<span class="inline_code"><code>if &lt;test_expression>:
+	&lt;code_block></code></span>
+						</pre>
 						<p>Where the code represented by <span class="inline_code">&lt;code_block></span> is only executed when the <span class="inline_code">if&lt;test_expression></span> code evaluates to True.</p>
 				    </div>
 				    <div class="sub_topic">
 						<h3>While Loops</h3>
-					    <p>While loops are used for repeatedly executing a block of code. In Python, while loops take the form: 
-					    <span class="centered_content">
-						    <span class="inline_code">
-						    	while &lt;test_expression>: <br/>
-						    		&emsp;&emsp;&lt;code_block>
-						    </span>
-						</span>
+					    <p>While loops are used for repeatedly executing a block of code. In Python, while loops take the form:</p> 
+					    <pre>
+<span class="inline_code"><code>while &lt;test_expression>:
+	&lt;code_block></code></span>
+						</pre>
 						<p>Where the code represented by <span class="inline_code">&lt;code_block></span> is only executed when the <span class="inline_code">while &lt;test_expression></span> expression is True.</p>
 						<p>Loops can be broken with a <span class="inline_code">break</span> statement, which instructs the computer to execute the next line of code even if the <span class="inline_code">while</span> test expression is still True. </p>
 				    </div>
@@ -403,9 +395,9 @@
 			    <div class="topic">
 					<h2>What is a List?</h2>
 				    <p>A list provides a way of storing mutable structured data. A list in Python is can be written as follows:</p>
-			    	<span class="centered_content">
-			    		<span class="inline_code">[‘item1’, ‘item2’, ‘item3’]</span>
-			    	</span>
+			    	<pre>
+<span class="inline_code"><code>[‘item1’, ‘item2’, ‘item3’]</code></span>
+			    	</pre>
 				    <p>Note that the any of the list contents above, like the string <span class="inline_code">‘item1’</span>, can be replaced with expressions of any other type -- numbers, booleans, expressions, or other lists. The list contents above would also be assigned index values <span class="inline_code">[0]</span>, <span class="inline_code">[1]</span>, and <span class="inline_code">[2]</span> -- this works in an analogous way to indexing with strings. However, it is important to realize that strings are different in that they are sequences of characters, and cannot include other data types. Strings are also immutable, as explained below.</p>
 			    </div>
 			    <div class="topic">
@@ -414,103 +406,86 @@
 			    	<div class="sub_topic">
 						<h3>Immutable Objects: Strings and Numbers</h3>
 				    	<p>Strings and numbers are immutable objects, meaning that their values cannot be changed. Take the code below, for example:
-				    	<span class="centered_content">
-				    		<span class="inline_code">
-				    			p = 45 <br/>
-				    			q = 45 <br/> 
-				    			print p → 45 <br/>
-				    			p = 50 <br/> 
-				    			print p → 50 <br/>  
-				    			print q → 45
-				    		</span>
-				    	</span>
+				    	<pre>
+<span class="inline_code"><code>p = 45
+q = 45
+print p → 45
+p = 50
+print p → 50
+print q → 45</code></span>
+				    	</pre>
 				    	<p>In the above example, we first assign the variables <span class="inline_code">p</span> and <span class="inline_code">q</span> to the number <span class="inline_code">45</span>. When we re-assign the variable <span class="inline_code">p</span> to the number <span class="inline_code">50</span>, this does not change the value <span class="inline_code">45</span>; it only makes the variable <span class="inline_code">p</span> refer to a different number. The number <span class="inline_code">45</span> still exists, as we can see with the statement <span class="inline_code">print q → 45</span>. The same would be true had we assigned these variables to random strings. All numbers exist and can be referred to via variables; likewise, all imaginable combinations of characters exist and can be referred to via variables.</p>
 			    	</div>
 				    <div class="sub_topic">
 						<h3>Mutable Objects: Lists</h3>
 					    <p>Lists are mutable objects, meaning that their values can be changed. For example, in Python the built in <span class="inline_code">append</span> operation mutates an existing list by adding elements to that list:</p>
-				    	<span class="centered_content">
-				    		<span class="inline_code">
-				    			&lt;list>.append(&lt;element>)
-				    		</span>  
-				    	</span>
+				    	<pre>
+<span class="inline_code"><code>&lt;list>.append(&lt;element>)</code></span>  
+				    	</pre>
 					    <p>Using this format, expression in <span class="inline_code">&lt;element></span> becomes the <span class="inline_code">[n]</span>th index of of a list of length <span class="inline_code">n</span>, or the <span class="inline_code">[0]</span>th index of a previously empty list (<span class="inline_code">[]</span>). If the <span class="inline_code">&lt;element></span> being appended is itself another list (or a variable that refers to a list), this still only appends a single element containing the list.</p>
 					    <p>Another way of mutating a list would be to use code such as the following:</p>
-				    	<span class="centered_content">  
-				    		<span class="inline_code">
-				    			test_list = [‘h’,‘e’,‘l’,‘l’,‘o’] <br/>
-				    			test_list[0] = ‘Y’ <br/>
-				    			print test_list → [‘Y’,‘e’,‘l’,‘l’,‘o’]  
-				    		</span>
-				    	</span>
+				    	<pre>  
+<span class="inline_code"><code>test_list = [‘h’,‘e’,‘l’,‘l’,‘o’]
+test_list[0] = ‘Y’
+print test_list → [‘Y’,‘e’,‘l’,‘l’,‘o’]  </code></span>
+				    	</pre>
 					    <p>The above behavior in fact changes the actual list which the variable <span class="inline_code">test_list</span> refers to.</p>
 				    </div>
 			    </div>
 			    <div class="topic">
 					<h2>Aliasing</h2>
 				    <p>Aliasing happens when more than one variable refers to the same object. As in the below code:</p>
-			    	<span class="centered_content">  
-				    	<span class="inline_code">  
-				    		x = 27 <br/> 
-			    			y = x <br/>
-			    			print x → 27 <br/>
-			    			print y → 27
-			    		</span>
-			    	</span>
+			    	<pre>  
+<span class="inline_code"><code> x = 27
+y = x
+print x → 27
+print y → 27</code></span>
+			    	</pre>
 			    </div>
 			    <div class="topic">
 					<h2>Concatenation with Lists</h2>
 				    <p>In contrast to the above examples which feature mutation of lists, in order to concatenate an object to a list (with the <span class="inline_code">+</span> operator), one could use the following code:</p>
-			    	<span class="centered_content">  
-				    	<span class="inline_code"> 
-				    		test_list = [‘Y’,‘e’,‘l’,‘l’,‘o’] <br/>
-				    		new_list = test_list + [‘w’] <br/>
-				    		print test_list → [‘Y’,‘e’,‘l’,‘l’,‘o’] <br/>
-				    		print new_list → [‘Y’,‘e’,‘l’,‘l’,‘o’,‘w’] 
-				    	</span>
-				    </span>
+			    	<pre>  
+<span class="inline_code"><code>test_list = [‘Y’,‘e’,‘l’,‘l’,‘o’]
+new_list = test_list + [‘w’]
+print test_list → [‘Y’,‘e’,‘l’,‘l’,‘o’]
+print new_list → [‘Y’,‘e’,‘l’,‘l’,‘o’,‘w’]</code></span>
+				    </pre>
 					<p>Concatenation does not mutate the original list; rather, it creates a new list.</p>
 					<p>We could also have concatenated a list to the original list, rather than a single character. Unlike using <span class="inline_code">append</span> to add a list to another list, which adds a single list element containing the appended list, concatenation adds each of the elements contained in the list being added to their own index. For example:</p>
-					<span class="centered_content">  
-				    	<span class="inline_code"> 
-				    		list_one = [1,2,3] <br/>
-				    		list_two = list_one + [4,5,6] <br/>
-				    		print list_two → [1,2,3,4,5,6] <br/>
-				    		print len(list_two) → 6 
-				    	</span>
-				    </span>
+					<pre>  
+<span class="inline_code"><code>list_one = [1,2,3]
+list_two = list_one + [4,5,6]
+print list_two → [1,2,3,4,5,6]
+print len(list_two) → 6 </code></span>
+				    </pre>
 					<p>whereas:</p>
-					<span class="centered_content">  
-				    	<span class="inline_code"> 
-				    		list_three = [10,9,8] <br/>
-				    		list_three.append([7,6,5]) <br/>
-				    		print list_three → [10,9,8,[7,6,5]] <br/>
-				    		print len(list_three) → 4 
-				    	</span>
-				    </span>
+					<pre>  
+<span class="inline_code"><code>list_three = [10,9,8]
+list_three.append([7,6,5])
+print list_three → [10,9,8,[7,6,5]]
+print len(list_three) → 4</code></span>
+				    </pre>
 					<p>As a side note to the concatenation example above, if one actually wanted to change the value that the original variable refers to, this is possible with the <span class="inline_code">+=</span> operator, as in the following code:</p>
-					<span class="centered_content">  
-				    	<span class="inline_code">
-				    		list_one = [1,2,3] <br/>
-				    		list_one += [4,5,6] <br/>   
-				    		print list_one → [1,2,3,4,5,6]
-				    	</span>
-				    </span>
+					<pre>  
+<span class="inline_code"><code>list_one = [1,2,3]
+list_one += [4,5,6]
+print list_one → [1,2,3,4,5,6]</code></span>
+				    </pre>
 					<p>The second statement above is really the same thing as <span class="inline_code">list_one = list_one + [4,5,6]</span>, which involves the concatenation <span class="inline_code">+</span> operator. For this reason, we are still creating a new list &amp; at the same time reassigning the original variable to that new list -- this is different from performing mutation.</p>
 			    </div>
 			    <div class="topic">
 					<h2>For Loops</h2>
 				    <p>A <span class="inline_code">for</span> loop is a construct that allows a block of code to iterate over structured data, including the contents of a list, one element at a time. The below function, which incorporates a <span class="inline_code">for</span> loop, returns the sum of any list of numbers:</p>
-			    	<span class="centered_content">  
-				    	<span class="inline_code">
-				    		def sum_list(any_num_list): <br/>
-				    			&emsp;&emsp;total_so_far = 0 <br/>
-				    			&emsp;&emsp;for next_element in any_num_list: <br/>
-				    				&emsp;&emsp;&emsp;&emsp;total_so_far = total_so_far + next_element <br/>
-				    				&emsp;&emsp;&emsp;&emsp;return total_so_far <br/><br/>
-				    		print sum_list([1,2,3,4,5]) → 15
-				    	</span>
-				    </span>
+			    	<pre>
+<span class="inline_code"><code>def sum_list(any_num_list):
+	total_so_far = 0
+	for next_element in any_num_list:
+		total_so_far = total_so_far + next_element
+		return total_so_far
+				    		
+print sum_list([1,2,3,4,5]) → 15</code></span>
+		`			</pre>
 			    </div>
 			</div>
     	<br/><!-- spacer -->
@@ -524,51 +499,45 @@
                     <h2>Python’s Standard Library</h2>
                     <p>Python comes with a Standard Library consisting of several built-in functions and many modules.</p> 
                     <p>The benefit of using a language like Python which is distributed with a robust library is that a programmer can start building useful apps immediately without getting bogged down with coding programs from the lowest level of abstraction up -- a process which essentially would involve building a standard library of one’s own. However, I can imagine that much of Python’s standard library came into being in much this way, through the work of many programmers over the last several years, as the language has grown in popularity.</p>
+                    <p>Python's Standard Library offers a toolbox of ready-to-use abstractions in the form of modules and built-in functions; in a similar way, HTML offers abstracted tools in the form of pre-defined elements. (After drawing this connection, I also wondered whether it is possible to define custom HTML tags -- I looked into this &amp; it turns out this is totally possible. Just as we can create new functions and modules in languages like Python, we can define new HTML tags -- although this technique is strongly discouraged in HTML).</p>
                 </div>
                 <div class="topic">
                     <h2>Built-in Functions</h2>
                     <p>Built-in functions provide programmers with abstracted functions for common programming tasks, like returning the length of an object (<span class="inline_code">len()</span>), or returning the absolute value of a number (<span class="inline_code">abs()</span>).</p> 
                     <p>To use a built-in function, like open() for opening a file, one can simply type the function:</p> 
-                    <span class="centered_content">
-                    	<span class="inline_code">
-                    		open(“<file_location>”)
-                    	</span>
-                    </span>
+                    <pre>
+<span class="inline_code"><code>open(“&lt;file_location>”)</code></span>
+                    </pre>
                 </div>
                 <div class="topic">
                     <h2>Modules</h2>
                     <p>The available modules provide platform-independent access to system functions like generating graphics on screen (<span class="inline_code">turtle</span>), or accessing websites (<span class="inline_code">webbrowser</span>). This is a bit of a generalization, as there are also modules that deal with OS-specific functions (Windows, Unix, Mac OS), and more unique utilities like a pseudo-random number generator (<span class="inline_code">random</span>).</p>
+                    <p>Although HTML and CSS do not have "modules" in this same sense, it can be helpful to think of the available abstractions of these languages as being organized within certain groups -- like distinguishing between "metadata" elements (like <span class="inline_code">&lt;head></span>) and "container" elements (like <span class="inline_code">&lt;div></span>). Indeed, when we look at the Mozilla HTML Reference, the elements are categorized in such a way.</p>
                 </div>
                 <div class="topic">
                     <h2>Importing Modules</h2>
                     <p>A module has to be imported before a program can use the classes and functions of that module. An import statement should be written at the top of a program as follows:</p>
-                    <span class="centered_content">
-                    	<span class="inline_code">
-                    		import turtle 
-                    	</span>
-                    </span>
+                    <pre>
+<span class="inline_code"><code>import turtle</code></span>
+                    </pre>
                     <p>To import a only part of a module, like a certain function or class, one can use the ##from keyword in the following syntax:</p>
-                    <span class="centered_content">
-                    	<span class="inline_code">
-                    		from &lt;module> import &lt;Class_name>
-                    	</span>
-                    </span>
+                    <pre>
+<span class="inline_code"><code>from &lt;module> import &lt;Class_name></code></span>
+                    </pre>
                     <p>We can also import our own modules and classes with the import keyword. In the Movie Website example we looked at in Course 3, we imported class <span class="inline_code">Movie</span>using the code below (the class definition was found in a file called <span class="inline_code">media.py</span>). This example also assumes that both files (<span class="inline_code">media.py</span> and whatever file we are importing that module to) reside in the same directory:</p> 
-                    <span class="centered_content">
-                    	<span class="inline_code">
-                    		import media
-                    	</span>
-                    </span>
+                    <pre>
+<span class="inline_code"><code>import media</code></span>
+                    </pre>
                     <p>Below is a video showing a program in which I imported the <span class="inline_code">os</span> module read and rename files for decoding a secret message for my daughter.<br/></p>
                     <span class="centered_content">
                     	<span class="graphic">
-                    		<iframe width="555.1" height="331.5" src="https://www.youtube.com/embed/4X3n5cIfICI" frameborder="0" allowfullscreen></iframe>
+                    		<iframe width="555" height="331" src="https://www.youtube.com/embed/4X3n5cIfICI" allowfullscreen></iframe>
                     	</span>
                     </span>
                     <p>In the following video my daughter listens as I explain my version the "Take a Break" program that was demonstrated in the course.<br/></p>
                     <span class="centered_content">
                     	<span class="graphic">
-                    		<iframe width="555.1" height="331.5" src="https://www.youtube.com/embed/9iFHFGsB4bI" frameborder="0" allowfullscreen></iframe>
+                    		<iframe width="555" height="331" src="https://www.youtube.com/embed/9iFHFGsB4bI" allowfullscreen></iframe>
                     	</span>
                     </span>
                 </div>
@@ -577,23 +546,19 @@
                     <p>Abstraction is the hiding of detail. We don’t necessarily need to understand how a module (or a built-in function) works at a low level in order to use it or experiment with it, so long as we carefully read the module’s documentation. Documentation for the Python Standard Library can be found at <a href="https://docs.python.org/2.7/">docs.python.org.</a></p>
                     <p>In addition to the official documentation, resourceful programmers will also use Google (or other search tools) and programming community websites like stackoverflow.com to overcome coding questions and roadblocks.</p>
                     <p>Abstraction, relating to readily-available code, is obviously beneficial as it spares programmers the time they would otherwise have spent writing similar code. When we reuse code, we are leveraging other programmers’ time investments and hard work by implementing their working code in new applications (or perhaps we may also be improving upon their preexisting code). When I write programs, I will assume that my code will be read and reused by other programmers &amp; I will strive to create useful and easy-to-understand abstractions.</p>
+                    <p>HTML is not an object-oriented language like Python -- in fact, it's really not a <em>programming language</em> in the same sense at all, since it is just plain text with "markups" indicating structure and font properties. However, I think it helps to consider HTML to be sort of like a (very) high-level programming language that is <em>interpreted</em> by a web browser (this is similar to how Python actually runs through another program called an <em>interpreter</em>). A web browser is like an <em>interpreter</em> that specializes in HTML documents. Also, web browsers themselves, like the available interpreters for Python, must be written in object-oriented programming languages like C++, or Java.</p>
                 </div>
                 <div class="topic">
                     <h2>Exceptions</h2>
-                    <p>As it was explained in the course, an exception is the same thing as an error in Python, like in the following example:</p>
-                    <span class="centered_content">
-                    	<span class="inline_code">
-                    		5 + "five"<br/><br/>
-                    		<span style="color:#ff4747">
-                    			Traceback (most recent call last):<br/>
-                    			&emsp;&emsp;File "<pyshell#4>", line 2, in &lt;module><br/>
-                    			TypeError: unsupported operand type(s) for +: 'int' and 'str'
-                    		</span>
-                    	</span>
-                    </span>
-                    <p>Exceptions can occur for many reasons, but generally speaking an exception describes the situation where, during the execution of code, the Python interpreter encounters some expression or instruction that it doesn’t understand.</p> 
-                    <p>From what I’ve looked at, it seems that there are ways to handle exceptions that avoid the disruption of an executing program -- however, in other cases Python does terminate the program &amp; displays an error message. Error messages provide valuable information for programmers, and Python is also helpful in that the location of the error often gets highlighted in the scripting window.</p> 
-                    <p>I would like to learn more about exceptions because it looks like the Python documentation distinguishes between syntax errors and exceptions. Likewise, it looks like some other programming languages treat errors and exceptions differently &amp; I don’t think I have the preliminary knowledge to make complete sense of what I’ve read about this -- and I really don’t know if the distinction relates in any meaningful way to Python. Maybe based upon what little I know about this, I can deduce that in Python all errors are a type of exception, but not all exceptions result in errors. Is this accurate? I remember the instructor mentioned we’d be spending more time on exceptions later...</p>
+                    <p>In Python, <em>exceptions</em> are errors that are detected during the execution of code that is otherwise syntactically correct. Exceptions can occur for many reasons, and there are several "built-in" exception types in Python. The following is an example of an error message for a <span class="inline_code">TypeError</span> exception:</p>
+                    <pre>
+<span class="inline_code"><code>5 + "five"
+
+Traceback (most recent call last):
+	File "&lt;pyshell#4>", line 2, in &lt;module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'</code></span>
+                    </pre>
+                    <p>Generally speaking, an exception describes the situation where, during the execution of code, the Python interpreter encounters some expression or instruction that it doesn’t understand. From what I’ve looked at, it seems that there are ways to handle exceptions that avoid the disruption of an executing program -- however, in other cases Python does terminate the program &amp; displays an error message. Error messages, like the one above, provide valuable information for programmers, and Python is also helpful in that the location of the error often gets highlighted in the scripting window.</p> 
                 </div>
                 <div class="topic">
                     <h2>Planning Ahead</h2>
@@ -610,11 +575,9 @@
                     <p>When functional programming alone does not provide the most elegant solution to a problem, a programmer may also consider using classes -- especially when the program in question (or parts therein) can naturally be conceptualized as an “object” of some kind. This approach to programming is referred to as <em>Object Oriented Programming</em>. By grouping together logically-related behaviors and attributes in the form of classes, we can neatly reduce multiple lines of code to a single descriptive name which is both easily understood &amp; immediately reusable throughout the rest of our code.</p> 
                     <p>Object oriented programming provides a useful approach to refactoring procedural code, i.e. reworking code that contains only functions into code that makes use of classes. More importantly, "object oriented thinking" can be performed at the very outset of preparing to solve a problem -- for example, it may be the case that the most essential “steps” involved in solving a problem may be thought of in terms of each being their own class. By the most essential “steps,” I’m referring to the top-level, easiest to conceptualize steps and not necessarily finer details which may equate more appropriately to class methods.  Another example might be a program that must offer many “features” -- each “feature” might be packaged into its own class, which itself might contain many methods and perhaps subclasses describing in finer detail the available behaviors of each feature category. I can imagine many other ways to think about programs as being a grouping of constituent parts. Object oriented programming at the initial stages of coding a new program may also involve writing high-level pseudocode describing a simple and organized approach to the task at hand.</p>
                     <p>Most if not all of the Python Standard Library modules contain classes that are ready to use. The first letter of a class name is always capitalized:
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			frederick = turtle.Turtle()
-                    		</span>
-                    	</span>
+                    <pre>
+<span class="inline_code"><code>frederick = turtle.Turtle()</code></span>
+                    </pre>
                     <p><span class="inline_code">Turtle</span> above is a class contained in the turtle module. As it was explained in the course, the module <span class="inline_code">turtle</span> represents a folder in the Python Standard Library, and inside that folder there is a file which contains a class definition called <span class="inline_code">class Turtle()</span>. Class <span class="inline_code">turtle.Turtle()</span> definition contains methods that allow users to draw shapes on a window (it’s fun!).</p>
                     <p>For some classes, arguments for the instance variables of the class must be provided inside of the elipses <span class="inline_code">()</span>, but it doesn’t seem like <span class="inline_code">Turtle()</span> requires this. I did look up the code for <span class="inline_code">class Turtle(object):</span> found in <span class="inline_code">PythonTurtle</span> on GitHub (I’m actually not sure if this is the same code as <span class="inline_code">class Turtle()</span> in the Python distribution which I’m using -- but my guess is <span class="inline_code">PythonTurtle</span> uses very similar code) -- it looks like inside of the __init__ function in the class definition of <span class="inline_code">Turtle()</span> does have instance variables, but that each instance variable is assigned a default value (like <span class="inline_code">self.color = "red"</span>).</p>
                 </div>
@@ -622,18 +585,14 @@
                     <h2>Instances or Objects</h2>
                     <p>When a new instance of a class is created, the <span class="inline_code">__init__()</span> function (constructor) defined inside of the class initializes new space in memory for the object (or instance) of that class to run. As opposed to the class definition code, an object generally does something with data and returns some outputs. It is up to the programmer to specify which of the available functions of a class are used and how.</p>
                     <p>The below code demonstrates how to initialize an instance of class <span class="inline_code">turtle.Turtle()</span>, which we will call <span class="inline_code">remus</span>:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			remus = turtle.Turtle()
-                    		</span>
-                    	</span>
+                    <pre>
+<span class="inline_code"><code>remus = turtle.Turtle()</code></span>
+                    </pre>
                     <p>Following this line of code, we can then assign values to any of the instance variables (or override the default values in the case of <span class="inline_code">Turtle()</span>), and also we can make our instance perform any of the methods of its class:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                   				remus.forward(200) &emsp; &emsp;# remus draws a line of 200 pixels in current orientation<br/>
-                    			remus.right(90)		&emsp; &emsp;# rotate remus orientation 90 degrees to the right
-                    		</span>
-                    	</span>
+                    <pre>
+<span class="inline_code"><code>remus.forward(200)      # remus draws a line of 200 pixels in current orientation
+remus.right(90)      # rotate remus orientation 90 degrees to the right</code></span>
+                    </pre>
                     <p>I came up with this analogy for classes and objects, which maybe isn’t the simplest analogy -- but I like it:</p>
                     	<ol class="list_bullets">
                     		<li><b>Class</b> = the rules of standard music notation.</li>
@@ -665,71 +624,58 @@
                 <div class="topic">
                     <h2>Designing a New Class</h2>
                     <p>When preparing to code a new class definition, it is a good practice to make note of what instance variables and instance methods we will need for the class. For the class <span class="inline_code">Movie</span> example from the course, we decided this class should remember data points like <span class="inline_code">title</span>, <span class="inline_code">youtube_trailer</span>, <span class="inline_code">storyline</span>, and <span class="inline_code">poster_image</span>. These are examples of instance variables. We also decided that class <span class="inline_code">Movie</span> should define an instance method for showing the movie trailer, called <span class="inline_code">show_trailer()</span>.</p>
+                    <p>When we create a new class in Python, any new instances of that class will be able to use the attributes and methods of that class. This behavior is comparable to what happens in web design when we declare a new CSS class -- all of the stylistic rules (analogous to Python class attributes &amp; methods) defined in the CSS declaration will be applied to HTML elements of that CSS class (analagous to Python instances of a class).</p>
                 </div>
                 <div class="topic">
                     <h2>Creating a New Class</h2>
                     <p>To define the class <span class="inline_code">Movie</span>, as described above, we start with the Python keyword <span class="inline_code">class</span>:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			class Movie():
-                    		</span>
-                    	</span>
+                    <pre>
+<span class="inline_code"><code>class Movie():</code></span>
+                    </pre>
                     <p>We then continue with our class definition by adding a constructor which will allow new instances of the class <span class="inline_code">Movie</span> to operate in memory; in this case we will define an <span class="inline_code">__init__()</span> function which will serve as the constructor:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			class Movie():<br/>
-                    				&emsp;&emsp;def __init__():
-                    		</span>
-                    	</span>
+                	<pre>		
+<span class="inline_code"><code>class Movie():
+	def __init__():</code></span>
+                	</pre>
                     <p>For the constructor’s first argument, it is a strong convention in Python to use the variable name <span class="inline_code">self</span>. Self (or another name like <span class="inline_code">movie_instance</span>, as the case may be) can be thought of as the object or instance being created by the constructor. We are given the impression in the course that the name <span class="inline_code">self</span> is used so commonly in Python class definitions that it is often mistakenly considered to be a predefined keyword.</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			class Movie():<br/>
-                    				&emsp;&emsp;def __init__(self):
-                    		</span>
-                    	</span>
+                    	<pre>
+<span class="inline_code"><code>class Movie():
+    def __init__(self):</code></span>
+                    	</pre>
                     <p>We continue defining the constructor method by adding <em>instance variables</em>, which describe some of the data attributes which may be defined for instances of the class (or the "things to remember," as described by the course instructor):</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                   	 			class Movie():<br/>
-                   	 		 		&emsp;&emsp;def __init__(self):<br/> 
-                   	 		 			&emsp;&emsp;&emsp;&emsp;self.title<br/>     		
-                   	 		 			&emsp;&emsp;&emsp;&emsp;self.storyline<br/> 
-                   	 		 			&emsp;&emsp;&emsp;&emsp;self.poster_image_url<br/> 
-                   	 		 			&emsp;&emsp;&emsp;&emsp;self.trailer_youtube_url
-                   	 		 </span>
-                   	 	</span>
+                    	<pre>
+<span class="inline_code"><code>class Movie():
+    def __init__(self):
+		self.title		
+		self.storyline
+		self.poster_image_url
+		self.trailer_youtube_url</code></span>
+                   	 	</pre>
                    	<p>We must then define additional input arguments (inside of the ellipses, after <span class="inline_code">self</span>) whose values <span class="inline_code">__init__</span> will pass to the instance variables. We also write assignment statements to tell the <span class="inline_code">__init__</span> method which instance variable each argument gets passed to. Adding this code allows the instance variable data points to be initialized whenever a new object of the class is instantiated:</p>
-                   		<span class="centered_content">
-                    		<span class="inline_code">
-                   				def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):<br/>
-                   					&emsp;&emsp;self.title = movie_title<br/>
-                   					&emsp;&emsp;self.storyline = movie_storyline<br/>
-                   					&emsp;&emsp;self.poster_image_url = poster_image<br/>
-                   					&emsp;&emsp;self.trailer_youtube_url = trailer_youtube
-                   			</span>
-                   		</span>
+                   		<pre>
+<span class="inline_code"><code>def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):
+	self.title = movie_title
+	self.storyline = movie_storyline
+	self.poster_image_url = poster_image
+	self.trailer_youtube_url = trailer_youtube</code></span>
+                   		</pre>
                    	<p>Regarding the example above, while I do understand that the arguments and instance variables are separate entities, I find it slightly annoying that in this first class <span class="inline_code">Movie</span> example, they are given nearly identical, yet still slightly different variable names (consider <span class="inline_code">trailer_youtube</span> versus <span class="inline_code">trailer_youtube_url</span>).</p> 
                    	<p>The below code demonstrates one example instance of the class <span class="inline_code">Movie</span>:</p>
-                   		<span class="centered_content">
-                    		<span class="inline_code">
-                   				toy_story = media.Movie(“Toy Story”,<br/>
-                   				&emsp;&emsp;&emsp;&emsp;“Toys Come to Life”,<br/> 
-                   				&emsp;&emsp;&emsp;&emsp;“http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg”,<br/>
-                   				&emsp;&emsp;&emsp;&emsp;"https://www.youtube.com/watch?v=KYz2wyBy3kc")
-                   			</span>
-                   		</span>
+                   		<pre>
+<span class="inline_code"><code>toy_story = media.Movie(“Toy Story”,
+  	“Toys Come to Life”,
+    “http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg”,
+    "https://www.youtube.com/watch?v=KYz2wyBy3kc")</code></span>
+                   		</pre>
                    	<p>In the above example, the instance being initialized is named <span class="inline_code">toy_story</span> -- so, <span class="inline_code">self = toy_story</span>, in this case. The other input arguments provided in the ellipses (<span class="inline_code">“Toy Story”</span>, <span class="inline_code">“Toys Come to Life”</span>, etc.) take the place of the <span class="inline_code">__init__</span> arguments (<span class="inline_code">“movie_title”</span>, <span class="inline_code">“movie_storyline”</span>, etc.). The values of these arguments are in turn passed one-after-the-other to the appropriate instance variables -- doing this initializes each of the instance variables.</p>
                 </div>
                 <div class="topic">
                     <h2>Adding Class Methods</h2>
                     <p>Continuing with the above example, we can add to this class definition a method to show a movie’s trailer video:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			def show_trailer(self):<br/>
-                    				&emsp;&emsp;webbrowser.open(self.trailer_youtube_url)
-                    		</span>
-                    	</span>
+                    	<pre>
+<span class="inline_code"><code>def show_trailer(self):
+    webbrowser.open(self.trailer_youtube_url)</code></span>
+                    	</pre>
                     <p>Note that for the above method to work, we will also add an import statement for the <span class="inline_code">webbrowser</span> module at the beginning of the class definition:  <span class="inline_code">import webbrowser</span></p>
                 </div>
                 <div class="topic">
@@ -739,50 +685,44 @@
                 <div class="topic">
                     <h2>Class Variables</h2>
                     <p>In cases where variables should be shared by all instances of a class, we can define class variables. In our class <span class="inline_code">Movie</span> example, if we wanted to add a list of valid ratings to every instances of that class, we could add the following class variable assignment statement (this will be written below the <span class="inline_code">class Movie():</span> statement, and just above the <span class="inline_code">__init__</span> method):</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			VALID_RATINGS = [“G”, “PG”, “PG-13”, “R”]
-                    		</span>
-                    	</span>
+                    <pre>
+<span class="inline_code"><code>VALID_RATINGS = [“G”, “PG”, “PG-13”, “R”]</code></span>
+                    </pre>
                     <p>Google python style guide recommends using ALL CAPS for class variables.</p> 
                     <p>In Python all classes come with some preexisting class variables. One example is the class variable for documentation <span class="inline_code">__doc__</span>.</p> 
                     <p>Here is an example of adding documentation to class Movie:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			class Movie():<br/>
-                    			&emsp;&emsp; """This class provides a way to store movie-related information"""
-                    		</span>
-                    	</span>
+                	<pre>
+<span class="inline_code"><code>class Movie():
+    """This class provides a way to store movie-related information"""</code></span>
+                	</pre>
                     <p>Python will interpret the above triple-quoted string as the <span class="inline_code">__doc__</span> for class <span class="inline_code">Movie</span>. Notice that we do not need to write <span class="inline_code">__doc__</span> anywhere in the class definition code. Once the above code has been added, we can view the documentation for this class using the print statement:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			print Movie.__doc__
-                    		</span>
-                    	</span>
+                    <pre>
+<span class="inline_code"><code>print Movie.__doc__</code></span>
+                    </pre>
                     <p>Some other examples of preexisting class variables are  <span class="inline_code">__module__</span> and  <span class="inline_code">__name__</span>.</p>
                 </div>
                 <div class="topic">
                     <h2>Inheritance</h2>
                     <p>Inheritance describes what happens when we create a <em>subclass</em> ("child" class) that <em>inherits</em> attributes and behaviors (i.e. class variables, instance variables, and methods) of an already existing class ("parent" class). This is conceptually similar to the idea of inheritance of visual properties in CSS -- except that in CSS inheritance is assumed to be true for any new statements/objects unless explicitly stated otherwise. In Python, there is a particular syntax, described below, for defining the child-parent relationship of classes. In both languages, inheritance offers similar benefits, in that can be used to eliminate unnecessary code (in Python, this has to do with the fact that we are reusing the parent class code), and can enhance readability.</p>
                     <p>Here is an example involving inheritance:</p>
-                    	<span class="centered_content">
-                    		<span class="inline_code">
-                    			class Parent():<br/>
-                    				&emsp;&emsp;def __init__(self, last_name, eye_color):<br/>
-                    					&emsp;&emsp;&emsp;&emsp;self.last_name = last_name<br/> 
-                    					&emsp;&emsp;&emsp;&emsp;self.eye_color = eye_color<br/><br/>
-                    			class Child(Parent):<br/> 		
-                    				&emsp;&emsp;def __init__(self, last_name, eye_color, number_of_toys):<br/> 
-                    					&emsp;&emsp;&emsp;&emsp;Parent.__init__(self, last_name, eye_color)<br/> 
-                    					&emsp;&emsp;&emsp;&emsp;self.number_of_toys = number_of_toys
-                    		</span>
-                    	</span>
+                    	<pre>
+<span class="inline_code"><code>class Parent():
+    def __init__(self, last_name, eye_color):
+		self.last_name = last_name
+		self.eye_color = eye_color
+                    			
+class Child(Parent):		
+    def __init__(self, last_name, eye_color, number_of_toys): 
+        Parent.__init__(self, last_name, eye_color)
+        self.number_of_toys = number_of_toys</code></span>
+                    	</pre>
                     <p>In order to instruct Python that subclass <span class="inline_code">Child</span> should inherit from class <span class="inline_code">Parent</span>, notice above that the name of the parent class, <span class="inline_code">Parent</span> in this case, is written inside of the ellipses. To initialize the first three instance variables of subclass Child (including ##self), we reuse the parent class code by calling the <span class="inline_code">__init__</span> method of the class <span class="inline_code">Parent</span> -- as a result we are minimizing the overall length of the subclass definition.</p>  
                     <p>Notice that the subclass <span class="inline_code">Child</span> inherits all of the instance variables from its parent class, and that we can declare additional variables like <span class="inline_code">number_of_toys</span>, in this case. Likewise, If the definition for class <span class="inline_code">Parent</span> contained any methods, subclass <span class="inline_code">Child</span> would be able to use these methods without requiring any additional code in its definition.</p>
                 </div>
                 <div class="topic">
                     <h2>Method Overriding</h2>
                     <p>In the case where a subclass contains a method of the same name as a method of its parent class, the subclass method will override the parent method (when that method is called for an object of the subclass, of course). This behavior is called <em>method overriding</em>.</p>
+                    <p>When I think of method overriding in Python, I'm reminded of the overriding priority of inline CSS styles versus CSS rules that would otherwise have been inherited for an HTML element. Even though right now I don't know that much about its usage, I'm thinking that in comparison with inline CSS code (which I would generally avoid), method overriding in Python is probably a more frequently useful and sanctioned technique (although I can also imagine how this could be the source of unforseen bugs in some cases). The reason I think it's more useful is that it doesn't make sense that we should only be able to <em>augment</em> a parent class by adding instance variables and methods to a Parent class; we should also be able to conveniently <em>change</em> (or perhaps remove) existing methods for inheritence to be really powerful.</p>
                 </div>
                 </div>
             <br/><!-- spacer -->
